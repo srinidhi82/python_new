@@ -15,12 +15,18 @@ def fetch_data_from_api(api_url):
     finally:
         print("API request completed.")
 
-api_url = 'https://jsonplaceholder.typicode.com/posts'
+api_url = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc'
 result = fetch_data_from_api(api_url)
 
 #Print the result if data is returned
-if result:
-    #print(result)
-    for post in result[:2]:  # Print the first 5 posts for brevity
-        print(f"Post ID: {post['id']}, Title: {post['title']}, Body: {post['body']}")
+for coin in result:
+    print(f"Coin: {coin['name']}")
+    print(f"Symbol: {coin['symbol']}")
+    print(f"Current Price: {coin['current_price']}")
+    print(f"Market Cap: {coin['market_cap']}")
+    print(f"High 24h: {coin['high_24h']}")
+    print(f"Low 24h: {coin['low_24h']}")
+    print(f"Price Change (24h): {coin['price_change_percentage_24h']}%")
+    print(f"Last Updated: {coin['last_updated']}")
+    print("-" * 40)
                              
