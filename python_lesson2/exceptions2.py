@@ -3,6 +3,7 @@ import requests
 def fetch_data_from_api(api_url):
     try:
         response = requests.get(api_url, timeout=5)
+        headers = {"Accept": "application/vnd.github.v3+json"}
         response.raise_for_status()  # Raise HTTPError for bad responses (4xx or 5xx)
         data = response.json()
         return data
@@ -16,6 +17,7 @@ def fetch_data_from_api(api_url):
         print("API request completed.")
 
 api_url = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc'
+url = "https://api.github.com/search/repositories?q=language:python+sort:stars"
 result = fetch_data_from_api(api_url)
 
 #Print the result if data is returned
