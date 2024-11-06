@@ -3,6 +3,6 @@ def fahrenheit_to_celsius(fahrenheit):
     return celsius
 
 # Example usage
-fahrenheit_temp = 59
+fahrenheit_temp = 78
 celsius_temp = fahrenheit_to_celsius(fahrenheit_temp)
-print(f"{fahrenheit_temp}°F is equal to {celsius_temp:.2f}°C")
+print(f"{fahrenheit_temp}°F is equal to {celsius_temp:.1f}°C")
