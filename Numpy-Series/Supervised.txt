@@ -1,0 +1,6 @@
+Supervised learning algorithms which learn x --> y mappings
+
+ex : 
+
+x = image, radar info ... maps y to -> Position of roads --- self driving cars
+x = email  .. maps y to - spam (yes/no) ... spam filtering app
