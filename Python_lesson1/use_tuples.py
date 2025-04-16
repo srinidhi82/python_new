@@ -1,3 +1,8 @@
+
+"""
+create lst comprehension to store new li of filenames using tuple
+
+"""
 filenames = ["data1.py", "data2.xls", "data3.xlsx", "data4.py", "data5.xls", "data6.xlsm"]
 
 

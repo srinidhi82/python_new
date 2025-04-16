@@ -1,0 +1,31 @@
+def perceive():
+    return input("What can I help you with today? ")
+
+def think(task):
+    if "weather" in task:
+        return "weather"
+    elif "news" in task:
+        return "news"
+    elif "joke" in task:
+        return "joke"
+    else:
+        return "unknown"
+
+def act(intent):
+    if intent == "weather":
+        print("It looks sunny today! (Static response for now)")
+    elif intent == "news":
+        print("Here's the latest headline: 'AI is changing the world!'")
+    elif intent == "joke":
+        print("Why did the Python developer go broke? Because he used up all his cache.")
+    else:
+        print("Sorry, I don’t understand that request.")
+
+# Main loop
+def run_agent():
+    task = perceive()
+    intent = think(task.lower())
+    act(intent)
+
+# Run
+run_agent()
